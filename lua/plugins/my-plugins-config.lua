@@ -57,7 +57,7 @@ return {
     cmd = { "ToggleTerm" },
     keys = {
       {
-        "<leader>Tf",
+        "<leader>tf",
         function()
           local count = vim.v.count1
           require("toggleterm").toggle(count, 0, LazyVim.root.get(), "float")
@@ -65,7 +65,7 @@ return {
         desc = "ToggleTerm (float root_dir)",
       },
       {
-        "<leader>Th",
+        "<leader>th",
         function()
           local count = vim.v.count1
           require("toggleterm").toggle(count, 15, LazyVim.root.get(), "horizontal")
@@ -73,7 +73,7 @@ return {
         desc = "ToggleTerm (horizontal root_dir)",
       },
       {
-        "<leader>Tv",
+        "<leader>tv",
         function()
           local count = vim.v.count1
           require("toggleterm").toggle(count, vim.o.columns * 0.4, LazyVim.root.get(), "vertical")
@@ -81,24 +81,22 @@ return {
         desc = "ToggleTerm (vertical root_dir)",
       },
       {
-        "<leader>Tn",
+        "<leader>tn",
         "<cmd>ToggleTermSetName<cr>",
         desc = "Set term name",
       },
       {
-        "<leader>Ts",
+        "<leader>ts",
         "<cmd>TermSelect<cr>",
         desc = "Select term",
       },
       {
-        "<leader>Tt",
-        function()
-          require("toggleterm").toggle(1, 100, LazyVim.root.get(), "tab")
-        end,
-        desc = "ToggleTerm (tab root_dir)",
+        "<leader>tt",
+        "<cmd>ToggleTerm<cr>",
+        desc = "ToggleTerm",
       },
       {
-        "<leader>TT",
+        "<leader>tT",
         function()
           require("toggleterm").toggle(1, 100, vim.loop.cwd(), "tab")
         end,
@@ -122,13 +120,13 @@ return {
       -- on_exit = fun(t: Terminal, job: number, exit_code: number, name: string) -- function to run when terminal process exits
       hide_numbers = true, -- hide the number column in toggleterm buffers
       shade_filetypes = {},
-      shade_terminals = true,
-      -- shading_factor = '<number>', -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
+      shade_terminals = false,
+      -- shading_factor = 3, -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
       start_in_insert = true,
       insert_mappings = true, -- whether or not the open mapping applies in insert mode
       terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
       persist_size = true,
-      direction = "horizontal" or "vertical" or "window" or "float",
+      direction = "vertical" or "horizontal" or "window" or "float",
       -- direction = "vertical",
       close_on_exit = true, -- close the terminal window when the process exits
       -- shell = vim.o.shell, -- change the default shell
