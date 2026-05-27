@@ -14,5 +14,4 @@ vim.cmd('highlight link @lsp.type.comment.cpp NONE')
 vim.cmd('highlight link @lsp.type.comment.c NONE')
 -- vim.api.nvim_set_hl(0, '@lsp.type.comment.c', {})
 -- vim.g.lsp_semantic_enabled = 0
-vim.cmd[[let g:codeium_server_config = { 'portal_url': 'https://dleaiml001.itg.ti.com', 'api_url': 'https://dleaiml001.itg.ti.com/_route/api_server' } ]]
 vim.g.minianimate_disable = true

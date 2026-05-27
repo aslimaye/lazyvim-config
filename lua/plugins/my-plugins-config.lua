@@ -43,9 +43,6 @@ return {
 	end
   },
   {
-	'Exafunction/codeium.vim',
-  },
-  {
 	"snacks.nvim",
 	opts = {
 		scroll = { enabled = false },
